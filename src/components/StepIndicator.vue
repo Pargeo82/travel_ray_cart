@@ -10,10 +10,10 @@
           :class="[
             'w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold',
             step.isActive
-              ? 'bg-gray-900 text-white'
+              ? 'bg-primary text-text-contrast'
               : step.isCompleted
-                ? 'bg-gray-300 text-gray-600 border-2 border-gray-600'
-                : 'bg-gray-300 text-gray-600',
+                ? 'bg-background text-text-primary-offset border-2 border-text-primary-offset'
+                : 'bg-background text-text-primary-offset',
           ]"
         >
           <i
@@ -22,7 +22,7 @@
           />
           <span v-else>{{ step.number }}</span>
         </div>
-        <div :class="['text-sm font-medium mt-2', step.isActive ? 'text-gray-900' : 'text-gray-600']">
+        <div :class="['Body2 mt-2', step.isActive ? 'Body1_bold' : '']">
           {{ step.title }}
         </div>
       </div>

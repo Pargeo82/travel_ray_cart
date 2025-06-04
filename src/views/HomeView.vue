@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-100 font-[Inter,sans-serif]">
+  <div class="min-h-screen bg-(--color-background)">
     <BookingHeader />
     <div class="max-w-7xl mx-auto px-6 py-8">
       <StepIndicator :steps="steps" />
@@ -7,7 +7,7 @@
         <div class="lg:col-span-2">
           <BookingForm />
         </div>
-        <div class="lg:col-span-1">
+        <div class="lg:col-span-1 md:max-w-[335px]">
           <BookingSidebar />
         </div>
       </div>
