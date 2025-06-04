@@ -1,0 +1,30 @@
+# Travel_ray_cart
+
+- using pnpm and Vue 4
+
+# Project Context
+
+- Simple website for a client
+
+# Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples
+- Use functional and declarative programming patterns; avoid classes
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Use type annotations where possible, not interface
+- For CSS use tailwindcss
+- every subfolder inside components should have its own index.ts for default export, so all component can be imported from 'component'
+- top level subfolders inside /src can be imported from 'src'
+- Structure repository files as follows:  
+  components - divided into layout, pages and shared
+  config - containing business info
+  constants
+  types
+  utils
+
+# Packages of note
+
+- shadcn
+- tailwindcss
+- vue-router
