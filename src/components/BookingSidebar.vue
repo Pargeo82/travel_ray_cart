@@ -121,8 +121,8 @@
         class="w-full rounded Body2"
       />
       <Button
+        variant="secondary"
         @click="applyPromoCode"
-        class="bg-secondary text-text-contrast px-4 py-2 rounded Body1_bold transition-colors hover:bg-opacity-90"
       >
         Apply
       </Button>
@@ -144,8 +144,8 @@
   <!-- Final Button -->
   <div class="flex justify-end">
     <Button
+      variant="secondary"
       @click="proceedToPayment"
-      class="bg-secondary text-text-contrast px-6 py-3 rounded Body1_bold transition-colors hover:bg-opacity-90"
     >
       Next: Payment
     </Button>

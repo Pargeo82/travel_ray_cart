@@ -4,7 +4,9 @@
 @theme {
   /* Custom colors */
   --color-primary: rgb(53, 51, 83);
+  --color-primary-dark: rgb(calc(53 * 0.8), calc(51 * 0.8), calc(83 * 0.8));
   --color-secondary: rgb(87, 196, 123);
+  --color-secondary-dark: rgb(calc(87 * 0.8), calc(196 * 0.8), calc(123 * 0.8));
   --color-background: rgb(242, 229, 229);
   --color-text-primary: rgb(18, 17, 17);
   --color-text-contrast: rgb(242, 229, 229);
