@@ -4,68 +4,67 @@
     <Card>
       <div class="h5 mb-6">Enter your details</div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-        <div>
-          <div class="Body1">
-            <span>First Name</span>
-            <span class="text-red-500">*</span>
-          </div>
-          <input
-            v-model="formData.firstName"
-            type="text"
-            class="w-full px-3 py-2 border rounded Body2"
-          />
-        </div>
-        <div>
-          <div class="Body1">
-            <span>Last name</span>
-            <span class="text-red-500">*</span>
-          </div>
-          <input
-            v-model="formData.lastName"
-            type="text"
-            class="w-full px-3 py-2 border rounded Body2"
-          />
-        </div>
-      </div>
-      <div class="w-1/2 pr-2 mb-4">
-        <div class="Body1">
-          <span>Email</span>
-          <span class="text-red-500">*</span>
-        </div>
-        <input
-          v-model="formData.email"
-          type="email"
-          class="w-full px-3 py-2 border rounded Body2"
+        <CustomInput
+          v-model="formData.firstName"
+          label="First Name"
+          required
+        />
+        <CustomInput
+          v-model="formData.lastName"
+          label="Last name"
+          required
         />
       </div>
       <div class="w-1/2 pr-2 mb-4">
-        <div class="Body1">
-          <span>Country</span>
-          <span class="text-red-500">*</span>
-        </div>
-        <select
-          v-model="formData.country"
-          class="w-full px-3 py-2 border rounded Body2"
-        >
-          <option value="Croatia">Croatia</option>
-        </select>
+        <CustomInput
+          v-model="formData.email"
+          label="Email"
+          type="email"
+          required
+        />
       </div>
       <div class="w-1/2 pr-2 mb-4">
-        <div class="Body1">Phone number</div>
+        <CustomSelect
+          v-model="formData.country"
+          label="Country"
+          :options="[
+            { value: 'croatia', label: 'Croatia' },
+            { value: 'slovenia', label: 'Slovenia' },
+            { value: 'other', label: 'Other' },
+          ]"
+          required
+        />
+      </div>
+      <div class="w-1/2 pr-2 mb-4">
+        <div class="Body1 mb-1">
+          <span>Phone number</span>
+          <span class="text-red-500">*</span>
+        </div>
         <div class="flex gap-2">
-          <select
-            v-model="formData.countryCode"
-            class="px-3 py-2 border rounded Body2"
-          >
-            <option value="+385">HR +385</option>
-          </select>
-          <input
-            v-model="formData.phone"
-            type="tel"
-            class="flex-1 px-3 py-2 border rounded Body2"
-          />
+          <div class="w-30">
+            <CustomSelect
+              v-model="formData.countryCode"
+              :options="[
+                { value: '+385', label: 'HR +385' },
+                { value: '+386', label: 'SI +386' },
+                { value: 'other', label: 'Other' },
+              ]"
+              select-class="h-10"
+            />
+          </div>
+          <div class="flex-1">
+            <CustomInput
+              v-model="formData.phone"
+              type="tel"
+              input-class="w-full"
+            />
+          </div>
         </div>
       </div>
+      <Separator
+        class="bg-text-primary-offset/40 mt-8 mb-6"
+        decorative
+      />
       <div class="mb-6">
         <div class="h6 mb-4">Who are you booking for?</div>
         <RadioGroup
@@ -88,6 +87,10 @@
           </div>
         </RadioGroup>
       </div>
+      <Separator
+        class="bg-text-primary-offset/40 mt-8 mb-6"
+        decorative
+      />
       <div class="mb-6">
         <div class="h6 text-text-primary mb-4">Are you travelling for work?</div>
         <RadioGroup
@@ -125,28 +128,36 @@
     <Card>
       <div class="h5 text-text-primary mb-6">Add to your booking</div>
       <div class="space-y-4 mb-6">
-        <label class="flex items-center gap-3 cursor-pointer">
-          <input
-            v-model="formData.needTaxi"
-            type="checkbox"
-            class="w-4 h-4 text-secondary border-text-primary-offset rounded-sm"
+        <div class="flex items-center space-x-2">
+          <Checkbox
+            id="taxi"
+            v-model:checked="formData.needTaxi"
           />
-          <span class="Body2"> I need a taxi / shuttle ride </span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer">
-          <input
-            v-model="formData.needCar"
-            type="checkbox"
-            class="w-4 h-4 text-secondary border-text-primary-offset rounded-sm"
+          <label
+            for="taxi"
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 Body2"
+          >
+            I need a taxi / shuttle ride
+          </label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <Checkbox
+            id="car"
+            v-model:checked="formData.needCar"
           />
-          <span class="Body2"> I would like to rent a car </span>
-        </label>
+          <label
+            for="car"
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 Body2"
+          >
+            I would like to rent a car
+          </label>
+        </div>
       </div>
       <div>
-        <div class="Body2 Body1_bold mb-2">Special requests / dietary restrictions</div>
-        <textarea
+        <CustomTextarea
           v-model="formData.specialRequests"
-          class="w-full px-3 py-2 border border-text-primary-offset rounded Body2 h-30 resize-none"
+          label="Special requests / dietary restrictions"
+          textarea-class="h-30"
         />
       </div>
     </Card>
@@ -154,34 +165,49 @@
     <!-- Payment -->
     <Card>
       <div class="h5 text-text-primary mb-6">Payment</div>
-      <div class="space-y-3">
-        <label class="flex items-center gap-3 cursor-pointer">
-          <input
-            v-model="formData.paymentTiming"
-            type="radio"
+      <RadioGroup
+        v-model="formData.paymentTiming"
+        :orientation="'vertical'"
+      >
+        <div class="flex items-center space-x-2">
+          <RadioGroupItem
+            id="pay-later"
             value="march-15"
-            class="w-4 h-4 text-secondary border-text-primary-offset"
           />
-          <span class="Body2">Pay on 15 March</span>
-        </label>
-        <label class="flex items-center gap-3 cursor-pointer">
-          <input
-            v-model="formData.paymentTiming"
-            type="radio"
+          <Label
+            for="pay-later"
+            class="Body2"
+            >Pay on 15 March</Label
+          >
+        </div>
+        <div class="flex items-center space-x-2">
+          <RadioGroupItem
+            id="pay-now"
             value="now"
-            class="w-4 h-4 text-secondary border-text-primary-offset"
           />
-          <span class="Body2">Pay now</span>
-        </label>
-      </div>
+          <Label
+            for="pay-now"
+            class="Body2"
+            >Pay now</Label
+          >
+        </div>
+      </RadioGroup>
     </Card>
   </div>
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Card } from '@/components/ui/card';
+import {
+  Card,
+  Checkbox,
+  RadioGroup,
+  RadioGroupItem,
+  Separator,
+  CustomInput,
+  CustomSelect,
+  CustomTextarea,
+} from '@/components/ui';
 
 const formData = reactive({
   firstName: '',
