@@ -43,7 +43,7 @@
           </div>
         </div>
         <Separator
-          class="bg-text-primary-offset/40 mt-8 mb-6"
+          class="bg-text-primary-offset/40 mt-4 mb-2"
           decorative
         />
         <div>
@@ -51,7 +51,7 @@
           <div class="Body1_bold">5 days</div>
         </div>
         <Separator
-          class="bg-text-primary-offset/40 mt-8 mb-6"
+          class="bg-text-primary-offset/40 mt-4 mb-2"
           decorative
         />
         <div>
@@ -77,7 +77,7 @@
             <span class="Body1">Limited time discount</span>
             <span class="Body1">€135.50</span>
           </div>
-          <div class="Body2 text-secondary mt-[-0.5rem] mb-4">Lorem ipsum discount</div>
+          <div class="Body2 text-secondary mt-[-0.5rem] mb-2">Lorem ipsum discount</div>
         </div>
       </div>
 
