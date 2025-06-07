@@ -1,0 +1,80 @@
+{
+  "app": {
+    "title": "Travel Ray Warenkorb",
+    "description": "Ihr Reisebegleiter"
+  },
+  "stepIndicator": {
+    "customerInfo": "Kundeninformation",
+    "paymentInfo": "Zahlungsinformationen",
+    "finished": "Abgeschlossen"
+  },
+  "bookingSidebar": {
+    "activityDetails": "Aktivitätsdetails",
+    "yourBookingDetails": "Ihre Buchungsdetails",
+    "startDate": "Anreisedatum",
+    "endDate": "Abreisedatum",
+    "totalLength": "Gesamtdauer",
+    "tripIsFor": "Reise ist für",
+    "adult": "Erwachsener",
+    "adults": "Erwachsene",
+    "child": "Kind",
+    "children": "Kinder",
+    "priceSummary": "Preisübersicht",
+    "originalPrice": "Ursprünglicher Preis",
+    "limitedTimeDiscount": "Zeitlich begrenzter Rabatt",
+    "loremIpsumDiscount": "Beispiel-Rabatt",
+    "total": "Gesamtbetrag",
+    "includesTaxesAndCharges": "Inkl. Steuern und Gebühren",
+    "priceInformation": "Preisinformationen",
+    "vat": "25% MwSt.",
+    "tourismTax": "Kurtaxe",
+    "payableAtProperty": "Vor Ort zu zahlen",
+    "promoCode": {
+      "title": "Aktionscode",
+      "placeholder": "Aktionscode eingeben",
+      "apply": "Anwenden"
+    },
+    "cancellationCosts": "Stornierungskosten",
+    "freeCancellationBefore": "Kostenlose Stornierung bis {date}",
+    "freeCancellationFrom": "Ab {date}",
+    "nextPayment": "Weiter: Bezahlung",
+    "day": "Tag",
+    "days": "Tage"
+  },
+  "bookingForm": {
+    "enterDetails": "Geben Sie Ihre Daten ein",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phoneNumber": "Telefonnummer",
+    "requiredField": "*",
+    "country": "Land",
+    "countries": {
+      "croatia": "Kroatien",
+      "slovenia": "Slowenien",
+      "other": "Andere"
+    },
+    "bookingFor": {
+      "title": "Für wen buchen Sie?",
+      "myself": "Ich bin der Hauptgast",
+      "someoneElse": "Buchung für jemand anderen"
+    },
+    "workTravel": {
+      "title": "Reisen Sie geschäftlich?",
+      "yes": "Ja",
+      "no": "Nein"
+    },
+    "addToBooking": "Zu Ihrer Buchung hinzufügen",
+    "extras": {
+      "taxi": "Ich benötige einen Taxi-/Shuttle-Service",
+      "carRental": "Ich möchte ein Auto mieten"
+    },
+    "specialRequests": "Besondere Wünsche / Ernährungsbeschränkungen",
+    "payment": "Zahlung",
+    "paymentOptions": {
+      "payLater": "Zahlen Sie am 15. März",
+      "payNow": "Jetzt bezahlen"
+    },
+    "completeBooking": "Buchung abschließen"
+  }
+}

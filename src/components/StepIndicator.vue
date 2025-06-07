@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { CheckIcon } from '@radix-icons/vue';
-import {
-  Stepper,
-  StepperIndicator,
-  StepperItem,
-  StepperSeparator,
-  StepperTitle,
-  StepperTrigger,
-} from '@/components/ui/stepper';
+import { Stepper, StepperIndicator, StepperItem, StepperTitle, StepperTrigger } from '@/components/ui/stepper';
 
-const steps = ['Customer Information', 'Payment Information', 'Finished'];
+const { t } = useI18n();
+
+const steps = [
+  t('stepIndicator.customerInfo'),
+  t('stepIndicator.paymentInfo'),
+  t('stepIndicator.finished')
+];
 const currentStep = ref(1);
 </script>
 
