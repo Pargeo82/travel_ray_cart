@@ -2,5 +2,79 @@
   "app": {
     "title": "Travel Ray Košarica",
     "description": "Vaš putnički suputnik"
+  },
+  "stepIndicator": {
+    "customerInfo": "Podaci o kupcu",
+    "paymentInfo": "Podaci o plaćanju",
+    "finished": "Završeno"
+  },
+  "bookingSidebar": {
+    "activityDetails": "Detalji aktivnosti",
+    "yourBookingDetails": "Detalji vaše rezervacije",
+    "startDate": "Datum početka",
+    "endDate": "Datum završetka",
+    "totalLength": "Ukupno trajanje",
+    "tripIsFor": "Putovanje je za",
+    "adult": "odrasla osoba",
+    "adults": "odraslih",
+    "child": "dijete",
+    "children": "djece",
+    "priceSummary": "Pregled cijene",
+    "originalPrice": "Izvorna cijena",
+    "limitedTimeDiscount": "Vremenski ograničeni popust",
+    "loremIpsumDiscount": "Primjer popusta",
+    "total": "Ukupno",
+    "includesTaxesAndCharges": "Uključuje poreze i naknade",
+    "priceInformation": "Informacije o cijeni",
+    "vat": "25% PDV",
+    "tourismTax": "Boravišna pristojba",
+    "payableAtProperty": "Plaćanje na licu mjesta",
+    "promoCode": {
+      "title": "Promotivni kod",
+      "placeholder": "Unesite promotivni kod",
+      "apply": "Primijeni"
+    },
+    "cancellationCosts": "Troškovi otkazivanja",
+    "freeCancellationBefore": "Besplatno otkazivanje do {date}",
+    "freeCancellationFrom": "Od {date}",
+    "nextPayment": "Dalje: Plaćanje",
+    "day": "dan",
+    "days": "dana"
+  },
+  "bookingForm": {
+    "enterDetails": "Unesite svoje podatke",
+    "firstName": "Ime",
+    "lastName": "Prezime",
+    "email": "E-pošta",
+    "phoneNumber": "Broj telefona",
+    "requiredField": "*",
+    "country": "Država",
+    "countries": {
+      "croatia": "Hrvatska",
+      "slovenia": "Slovenija",
+      "other": "Ostalo"
+    },
+    "bookingFor": {
+      "title": "Za koga rezervirate?",
+      "myself": "Ja sam glavni gost",
+      "someoneElse": "Rezerviram za drugu osobu"
+    },
+    "workTravel": {
+      "title": "Putujete li u poslovne svrhe?",
+      "yes": "Da",
+      "no": "Ne"
+    },
+    "addToBooking": "Dodajte svojoj rezervaciji",
+    "extras": {
+      "taxi": "Trebam prijevoz/taksi",
+      "carRental": "Želim iznajmiti automobil"
+    },
+    "specialRequests": "Posebni zahtjevi / Prehrambena ograničenja",
+    "payment": "Plaćanje",
+    "paymentOptions": {
+      "payLater": "Platite 15. ožujka",
+      "payNow": "Plati odmah"
+    },
+    "completeBooking": "Završi rezervaciju"
   }
 }

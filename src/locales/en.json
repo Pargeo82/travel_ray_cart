@@ -2,5 +2,79 @@
   "app": {
     "title": "Travel Ray Cart",
     "description": "Your travel companion"
+  },
+  "stepIndicator": {
+    "customerInfo": "Customer Information",
+    "paymentInfo": "Payment Information",
+    "finished": "Finished"
+  },
+  "bookingSidebar": {
+    "activityDetails": "Activity Details",
+    "yourBookingDetails": "Your booking details",
+    "startDate": "Start date",
+    "endDate": "End date",
+    "totalLength": "Total length",
+    "tripIsFor": "Trip is for",
+    "adult": "adult",
+    "adults": "adults",
+    "child": "child",
+    "children": "children",
+    "priceSummary": "Your price summary",
+    "originalPrice": "Original price",
+    "limitedTimeDiscount": "Limited time discount",
+    "loremIpsumDiscount": "Lorem ipsum discount",
+    "total": "Total",
+    "includesTaxesAndCharges": "Includes taxes and charges",
+    "priceInformation": "Price information",
+    "vat": "25% VAT",
+    "tourismTax": "Tourism tax",
+    "payableAtProperty": "Payable at the property",
+    "promoCode": {
+      "title": "Promo code",
+      "placeholder": "Enter promo code",
+      "apply": "Apply"
+    },
+    "cancellationCosts": "Costs of cancellation",
+    "freeCancellationBefore": "Free cancellation before {date}",
+    "freeCancellationFrom": "From {date}",
+    "nextPayment": "Next: Payment",
+    "day": "day",
+    "days": "days"
+  },
+  "bookingForm": {
+    "enterDetails": "Enter your details",
+    "firstName": "First Name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phoneNumber": "Phone number",
+    "requiredField": "*",
+    "country": "Country",
+    "countries": {
+      "croatia": "Croatia",
+      "slovenia": "Slovenia",
+      "other": "Other"
+    },
+    "bookingFor": {
+      "title": "Who are you booking for?",
+      "myself": "I am the main guest",
+      "someoneElse": "Booking for someone else"
+    },
+    "workTravel": {
+      "title": "Are you travelling for work?",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "addToBooking": "Add to your booking",
+    "extras": {
+      "taxi": "I need a taxi / shuttle ride",
+      "carRental": "I would like to rent a car"
+    },
+    "specialRequests": "Special requests / dietary restrictions",
+    "payment": "Payment",
+    "paymentOptions": {
+      "payLater": "Pay on 15 March",
+      "payNow": "Pay now"
+    },
+    "completeBooking": "Complete Booking"
   }
 }

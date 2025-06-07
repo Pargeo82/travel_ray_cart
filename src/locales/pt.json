@@ -2,5 +2,79 @@
   "app": {
     "title": "Carrinho Travel Ray",
     "description": "Seu companheiro de viagem"
+  },
+  "stepIndicator": {
+    "customerInfo": "Informações do Cliente",
+    "paymentInfo": "Informações de Pagamento",
+    "finished": "Concluído"
+  },
+  "bookingSidebar": {
+    "activityDetails": "Detalhes da Atividade",
+    "yourBookingDetails": "Detalhes da sua reserva",
+    "startDate": "Data de início",
+    "endDate": "Data de término",
+    "totalLength": "Duração total",
+    "tripIsFor": "Viagem para",
+    "adult": "adulto",
+    "adults": "adultos",
+    "child": "criança",
+    "children": "crianças",
+    "priceSummary": "Resumo do preço",
+    "originalPrice": "Preço original",
+    "limitedTimeDiscount": "Desconto por tempo limitado",
+    "loremIpsumDiscount": "Desconto de exemplo",
+    "total": "Total",
+    "includesTaxesAndCharges": "Inclui impostos e taxas",
+    "priceInformation": "Informações de preço",
+    "vat": "IVA 25%",
+    "tourismTax": "Taxa de turismo",
+    "payableAtProperty": "Pagamento no local",
+    "promoCode": {
+      "title": "Código promocional",
+      "placeholder": "Digite o código promocional",
+      "apply": "Aplicar"
+    },
+    "cancellationCosts": "Custos de cancelamento",
+    "freeCancellationBefore": "Cancelamento gratuito até {date}",
+    "freeCancellationFrom": "A partir de {date}",
+    "nextPayment": "Próximo: Pagamento",
+    "day": "dia",
+    "days": "dias"
+  },
+  "bookingForm": {
+    "enterDetails": "Insira seus dados",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "email": "E-mail",
+    "phoneNumber": "Telefone",
+    "requiredField": "*",
+    "country": "País",
+    "countries": {
+      "croatia": "Croácia",
+      "slovenia": "Eslovénia",
+      "other": "Outro"
+    },
+    "bookingFor": {
+      "title": "Para quem está fazendo a reserva?",
+      "myself": "Sou o hóspede principal",
+      "someoneElse": "Reservando para outra pessoa"
+    },
+    "workTravel": {
+      "title": "Está viajando a trabalho?",
+      "yes": "Sim",
+      "no": "Não"
+    },
+    "addToBooking": "Adicionar à sua reserva",
+    "extras": {
+      "taxi": "Preciso de táxi/transporte",
+      "carRental": "Gostaria de alugar um carro"
+    },
+    "specialRequests": "Pedidos especiais / Restrições alimentares",
+    "payment": "Pagamento",
+    "paymentOptions": {
+      "payLater": "Pagar em 15 de março",
+      "payNow": "Pagar agora"
+    },
+    "completeBooking": "Finalizar Reserva"
   }
 }
