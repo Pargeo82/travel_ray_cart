@@ -53,7 +53,7 @@ export type BookingFormData = {
   country: string;
   countryCode: string;
   phone: string;
-  bookingFor: 'main-guest' | 'other';
+  bookingFor: 'myself' | 'someone-else';
   workTravel: 'yes' | 'no';
   needTaxi: boolean;
   needCar: boolean;

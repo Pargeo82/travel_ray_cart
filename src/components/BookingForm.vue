@@ -4,21 +4,61 @@
     class="space-y-6"
   >
     <!-- Customer Details -->
-    <Card>
+    <Card
+      v-if="visibility?.['customer-details']"
+      class="relative"
+    >
+      <DeleteButton
+        v-if="isEditing"
+        component-id="customer-details"
+        :is-editing="isEditing"
+        @remove="emitRemove"
+      />
       <div class="h5 mb-6">{{ $t('bookingForm.enterDetails') }}</div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-        <CustomInput
-          v-model="localFormData.firstName"
-          :label="$t('bookingForm.firstName')"
-          required
-        />
-        <CustomInput
-          v-model="localFormData.lastName"
-          :label="$t('bookingForm.lastName')"
-          required
-        />
+        <div
+          v-if="visibility?.['form-first-name']"
+          class="relative"
+        >
+          <DeleteButton
+            v-if="isEditing"
+            component-id="form-first-name"
+            :is-editing="isEditing"
+            @remove="emitRemove"
+          />
+          <CustomInput
+            v-model="localFormData.firstName"
+            :label="$t('bookingForm.firstName')"
+            required
+          />
+        </div>
+        <div
+          v-if="visibility?.['form-last-name']"
+          class="relative"
+        >
+          <DeleteButton
+            v-if="isEditing"
+            component-id="form-last-name"
+            :is-editing="isEditing"
+            @remove="emitRemove"
+          />
+          <CustomInput
+            v-model="localFormData.lastName"
+            :label="$t('bookingForm.lastName')"
+            required
+          />
+        </div>
       </div>
-      <div class="w-1/2 pr-2 mb-4">
+      <div
+        v-if="visibility?.['form-email']"
+        class="w-1/2 pr-2 mb-4 relative"
+      >
+        <DeleteButton
+          v-if="isEditing"
+          component-id="form-email"
+          :is-editing="isEditing"
+          @remove="emitRemove"
+        />
         <CustomInput
           v-model="localFormData.email"
           :label="$t('bookingForm.email')"
@@ -26,7 +66,16 @@
           required
         />
       </div>
-      <div class="w-1/2 pr-2 mb-4">
+      <div
+        v-if="visibility?.['form-country']"
+        class="w-1/2 pr-2 mb-4 relative"
+      >
+        <DeleteButton
+          v-if="isEditing"
+          component-id="form-country"
+          :is-editing="isEditing"
+          @remove="emitRemove"
+        />
         <CustomSelect
           v-model="localFormData.country"
           :label="$t('bookingForm.country')"
@@ -38,7 +87,16 @@
           required
         />
       </div>
-      <div class="w-1/2 pr-2 mb-4">
+      <div
+        v-if="visibility?.['form-phone']"
+        class="w-1/2 pr-2 mb-4 relative"
+      >
+        <DeleteButton
+          v-if="isEditing"
+          component-id="form-phone"
+          :is-editing="isEditing"
+          @remove="emitRemove"
+        />
         <div class="Body1 mb-1">
           <span>{{ $t('bookingForm.phoneNumber') }}</span>
           <span class="text-red-500">{{ $t('bookingForm.requiredField') }}</span>
@@ -64,16 +122,25 @@
           </div>
         </div>
       </div>
-      <Separator
-        class="bg-text-primary-offset/40 mt-8 mb-6"
-        decorative
-      />
-      <div class="mb-6">
+      <div
+        v-if="visibility?.['form-booking-for']"
+        class="mb-6 relative"
+      >
+        <Separator
+          class="bg-text-primary-offset/40 mt-8 mb-6"
+          decorative
+        />
+        <DeleteButton
+          v-if="isEditing"
+          component-id="form-booking-for"
+          :is-editing="isEditing"
+          @remove="emitRemove"
+        />
         <div class="h6 mb-4">{{ $t('bookingForm.bookingFor.title') }}</div>
         <RadioGroup
           v-model="localFormData.bookingFor"
           default-value="myself"
-          :orientation="'vertical'"
+          orientation="vertical"
         >
           <div class="flex items-center space-x-2 Body1">
             <RadioGroupItem
@@ -91,11 +158,20 @@
           </div>
         </RadioGroup>
       </div>
-      <Separator
-        class="bg-text-primary-offset/40 mt-8 mb-6"
-        decorative
-      />
-      <div class="mb-6">
+      <div
+        v-if="visibility?.['form-work-travel']"
+        class="mb-6 relative"
+      >
+        <Separator
+          class="bg-text-primary-offset/40 mt-8 mb-6"
+          decorative
+        />
+        <DeleteButton
+          v-if="isEditing"
+          component-id="form-work-travel"
+          :is-editing="isEditing"
+          @remove="emitRemove"
+        />
         <div class="h6 text-text-primary mb-4">{{ $t('bookingForm.workTravel.title') }}</div>
         <RadioGroup
           v-model="localFormData.workTravel"
@@ -131,10 +207,28 @@
     </Card>
 
     <!-- Add to Booking -->
-    <Card>
+    <Card
+      v-if="visibility?.['add-to-booking']"
+      class="relative"
+    >
+      <DeleteButton
+        v-if="isEditing"
+        component-id="add-to-booking"
+        :is-editing="isEditing"
+        @remove="emitRemove"
+      />
       <div class="h5 text-text-primary mb-6">{{ $t('bookingForm.addToBooking') }}</div>
       <div class="space-y-4 mb-6">
-        <div class="flex items-center space-x-2">
+        <div
+          v-if="visibility?.['form-taxi-option']"
+          class="flex items-center space-x-2 relative"
+        >
+          <DeleteButton
+            v-if="isEditing"
+            component-id="form-taxi-option"
+            :is-editing="isEditing"
+            @remove="emitRemove"
+          />
           <Checkbox
             id="taxi"
             v-model:checked="localFormData.needTaxi"
@@ -146,7 +240,16 @@
             {{ $t('bookingForm.extras.taxi') }}
           </label>
         </div>
-        <div class="flex items-center space-x-2">
+        <div
+          v-if="visibility?.['form-car-option']"
+          class="flex items-center space-x-2 relative"
+        >
+          <DeleteButton
+            v-if="isEditing"
+            component-id="form-car-option"
+            :is-editing="isEditing"
+            @remove="emitRemove"
+          />
           <Checkbox
             id="car"
             v-model:checked="localFormData.needCar"
@@ -159,7 +262,16 @@
           </label>
         </div>
       </div>
-      <div>
+      <div
+        v-if="visibility?.['form-special-requests']"
+        class="relative"
+      >
+        <DeleteButton
+          v-if="isEditing"
+          component-id="form-special-requests"
+          :is-editing="isEditing"
+          @remove="emitRemove"
+        />
         <CustomTextarea
           v-model="localFormData.specialRequests"
           :label="$t('bookingForm.specialRequests')"
@@ -169,13 +281,31 @@
     </Card>
 
     <!-- Payment -->
-    <Card>
+    <Card
+      v-if="visibility?.['payment']"
+      class="relative"
+    >
+      <DeleteButton
+        v-if="isEditing"
+        component-id="payment"
+        :is-editing="isEditing"
+        @remove="emitRemove"
+      />
       <div class="h5 text-text-primary mb-6">{{ $t('bookingForm.payment') }}</div>
       <RadioGroup
         v-model="localFormData.paymentTiming"
         :orientation="'vertical'"
       >
-        <div class="flex items-center space-x-2">
+        <div
+          v-if="visibility?.['form-pay-later']"
+          class="flex items-center space-x-2 relative"
+        >
+          <DeleteButton
+            v-if="isEditing"
+            component-id="form-pay-later"
+            :is-editing="isEditing"
+            @remove="emitRemove"
+          />
           <RadioGroupItem
             id="pay-later"
             value="march-15"
@@ -187,7 +317,16 @@
             {{ $t('bookingForm.paymentOptions.payLater') }}
           </Label>
         </div>
-        <div class="flex items-center space-x-2">
+        <div
+          v-if="visibility?.['form-pay-now']"
+          class="flex items-center space-x-2 relative"
+        >
+          <DeleteButton
+            v-if="isEditing"
+            component-id="form-pay-now"
+            :is-editing="isEditing"
+            @remove="emitRemove"
+          />
           <RadioGroupItem
             id="pay-now"
             value="now"
@@ -207,9 +346,11 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import type { BookingFormData } from '@/types/booking';
+import type { FormVisibility } from '@/types/visibility';
 import {
   Card,
   Checkbox,
+  DeleteButton,
   RadioGroup,
   RadioGroupItem,
   Label,
@@ -225,12 +366,19 @@ const props = defineProps<{
     needTaxi: boolean;
     needCar: boolean;
   };
+  isEditing?: boolean;
+  visibility?: FormVisibility;
 }>();
 
 const emit = defineEmits<{
   (e: 'update:formData', value: BookingFormData): void;
   (e: 'submit'): void;
+  (e: 'remove-component', id: string): void;
 }>();
+
+const emitRemove = (componentId: string) => {
+  emit('remove-component', componentId);
+};
 
 const localFormData = computed<BookingFormData>({
   get: () => props.formData,

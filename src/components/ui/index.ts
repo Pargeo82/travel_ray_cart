@@ -14,3 +14,4 @@ export { Stepper } from './stepper';
 export { default as CustomInput } from './custom-input';
 export { default as CustomSelect } from './custom-select';
 export { default as CustomTextarea } from './custom-textarea';
+export { default as DeleteButton } from './delete-button';
